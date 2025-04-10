@@ -7,9 +7,9 @@ function eligibityCheck(name, age){
 	return new Promise((resolve, reject)=>{
 		setTimeout(()=>{
 			if(age > 18){
-				resolve(`Welcome, ${name} . You can vote`);
+				resolve(`Welcome, ${name}. You can vote.`);
 			} else {
-				reject(`Oh sorry ${name}. You aren't old enough`)
+				reject(`Oh sorry ${name}. You aren\'t old enough`)
 			}
 		}, 4000)
 	})
@@ -20,7 +20,7 @@ formSubmit.addEventListener('submit', function(event){
 	const age = parseInt(ageInput.value);
 
 	if(!name || isNaN(age)){
-		alert("Please enter valid details.");
+		alert("Please enter valid details");
 		return;
 	}
 	eligibityCheck(name, age)
